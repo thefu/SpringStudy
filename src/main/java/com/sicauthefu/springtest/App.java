@@ -14,12 +14,12 @@ public class App {
         // create and configure beans
 //        ApplicationContext context = new ClassPathXmlApplicationContext("aspects.xml", "daos.xml", "services.xml");
 
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeansConfig.class);
-//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com.sicauthefu.springtest");
+//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(BeansConfig.class);
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("com.sicauthefu.springtest");
         //如果没有Spring框架，我们需要自己创建User/Dao/Service等，但是有了Spring框架，可以将原有bean的创建工作转给框架，需要时从Bean的容器中获取即可
 
         // retrieve configured instance
-        UserServiceImpl service = context.getBean("userService", UserServiceImpl.class);
+        UserServiceImpl service = context.getBean(UserServiceImpl.class);
 
         // use configured instance
         List<User> userList = service.findUserList();

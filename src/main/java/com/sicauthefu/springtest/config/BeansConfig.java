@@ -11,20 +11,20 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 @Configuration
 public class BeansConfig {
 
-    @Bean("userDao")
-    public UserDaoImpl userDao() {
-        return new UserDaoImpl();
-    }
-
-    @Bean("userService")
-    public UserServiceImpl userService() {
-        UserServiceImpl userService = new UserServiceImpl();
-        userService.setUserDao(userDao());
-        return userService;
-    }
-
-    @Bean("logAspect")
-    public LogAspect logAspect() {
-        return new LogAspect();
-    }
+//    @Bean("userDao")
+//    public UserDaoImpl userDao() {
+//        return new UserDaoImpl();
+//    }
+//
+//    @Bean("userService")
+//    public UserServiceImpl userService() {
+//        UserServiceImpl userService = new UserServiceImpl();
+//        userService.setUserDao(userDao());
+//        return userService;
+//    }
+//
+//    @Bean("logAspect")
+//    public LogAspect logAspect() {
+//        return new LogAspect();
+//    }
 }
